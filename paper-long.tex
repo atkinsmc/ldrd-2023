@@ -55,7 +55,6 @@
 \title{Forging new pathways to improved nuclear-reaction predictions}
 \author{Mack C. Atkinson}
 \maketitle
-\newpage
 
 %\section{Introduction}
 %The origin and abundance of all atomic nuclei lies at the heart of nuclear physics.
@@ -101,10 +100,18 @@ FRIB), the development of more precise nuclear structure models, and the develop
 %an area where nuclear reaction theory can be improved, and thus this proposal is to improve reaction descriptions such that nuclear structure can more reliably be extracted from
 %nuclear scattering data.
 
-Our approach to improving nuclear-reaction calculations is to develop an effective nucleon-nucleon interaction. The need for an effective interaction is most clearly demonstrated
-in so-called knockout reactions where a projectile is used to knockout one or more protons (or neutrons) from a nucleus. Employing a dispersive optical model (DOM), developed
-recently in the PI's PhD, the PI previously performed reaction calculations of both electron-induced knockout $(e,e'p)$ and proton-induced knockout $(p,2p)$ from the same nucleus
-$^{40}$Ca.  
+We propose to develop an effective interaction that can be used in nuclear reaction calculations. One particularly useful reaction for probing nuclear structure is
+the so-called knockout reaction where a projectile is used to knockout a proton or a neutron from a nucleus. A specific case of this is an electron-induced reaction on $^{40}$Ca
+where a high-energy electron beam is shot at a Calcium target resulting in the removal of a proton. The PI developed a dispersive optical model (DOM) during his PhD which provides
+a consistent description of both structure and scattering states of nuclei. In particular, the PI applied the DOM to 40Ca which allowed a consistent reaction-theory description to
+the electron-induced knockout $(e,e'p)$. For the first time, all ingredients needed for this DWIA description were provided from the same model resulting in a beautiful description
+of the experimental data. The interesting quantity coming from this reaction is the so-called spectroscopic factor, which is like a probability for the struck proton to have been
+found in the particular state it was. Now, electron scattering is a very clean way of probing atomic nuclei since the electron-proton interaction is well understand. However,
+electron scattering requires a stable target - thus only stable nuclei can be investigated with it. Thus, if one wants to investigate nuclei near the limits of stability, inverse
+kinematics must be utilized as is the case at FRIB. The reactions are more complicated now since they are hadron-induced, thus the nuclear force is used between the projectile and
+target system. In order to investigate these hadron-induced reactions, I calculated the same proton removal from 40Ca, expect instead of being electron-induced it is proton induced
+(note that this experiment could be done in inverse kinematics since a Hydrogen gas is a suitable target for a beam of unstable nuclei to strike). Once again, since the DOM is now
+developed I have a consistent description of all aspects of this removal reaction.
 \begin{wrapfigure}{r}{0.5\textwidth}
    \label{fig:eep_p2p}
    \begin{center}
@@ -116,16 +123,31 @@ $^{40}$Ca.
    \caption{The left figure shows the results of a DWIA calculation of $^{40}$Ca$(e,e'p)^{39}$K using DOM ingredients. The right figure shows a similar DWIA calculation, except the
    probe is now a proton rather than an electron, $^{40}$Ca$(p,2p)^{39}$K. While the same DOM ingredients are used in both cases, the electron-induced knockout reaction [left] reproduces
 the experimental data much more accurately than the proton-induced knockout reaction [right]. Below each curve is a schematic of each process.}
-\end{wrapfigure} The theoretical calculations of these two knockout reactions combine the same structure and continuum information from $^{40}$Ca, all of which is consistently
-provided by the same model - the DOM. The only difference between the two calculations is the interaction between the probe (electron or proton) and $^{40}$Ca (see the bottom two
-schematics in Fig.~\ref{fig:eep_p2p}). Even though most of the ingredients are the same in these two calculations, there is a clear difference in the results when confronted with
-experimental data (see the top left and right panels in Fig.~\ref{fig:eep_p2p}). Until now, there was not a model like the DOM that could provide the same, consistent ingredients
-to these reaction calculations. With only one difference between the two calculations, it is clear that the deficiency in the proton-induced calculation is rooted in the
-interaction between the probing proton and $^{40}$Ca. Indeed, the interaction of electrons with nucleons is well-understood so it is not surprising that the proton-induced reaction
-is more difficult. This lack of consistency poses a problem, since while both reactions probe the same nuclear structure, any structure information extracted from the
-proton-induced experiment will be off by roughly 20\%. To rectify the deficiency in the proton-induced reaction calculation, we will improve the proton-proton interaction causing the
-issue. Fortunately, we are in a great position to accomplish this by combinine many-body theory and the DOM to generate a more realistic proton-proton interaction that is encoded
-with $^{40}$Ca - see Fig.
+\end{wrapfigure}
+However, comparing the resulting cross section with the experimental data showed a 20\% lack of strength. The only difference between the electron-induced reaction and the
+proton-induced reactions is the fact that the interaction between the probe and the nucleus is now the nuclear force rather than the electromagnetic force (of course the nuclear
+structure information of 40Ca is an intrinsic property so this remains unchanged). Since the DOM is uniquely suited for both of these reactions, it is now clear that the
+discrepancy is coming from the proton-proton interaction between the proton probe and the struck proton in Calcium. Thus, I have an ideal testing stage for developing a better
+proton-proton interaction to improve the reaction description of hadron-induced knockout. Using the DOM, I can dress the bare proton-proton interaction with the structure of 40Ca
+leading to a more realistic description of the (p,2p) interaction. \textcolor{blue}{[Here I am trying to indicate what else is out there, and also that the stage is uniquely set for us to calculate
+this now].} Until the DOM was developed, previous calculations of (p,2p) were always scaled to match the experimental data -
+meaning that there was no way to tell if there were a discrepancy in the structure description. Because of this, the proton-proton interaction used in the (p,2p) reaction has not
+seeen development for over two decades. The most recent development was in 2000 where a group from Melbourne used infinite nuclear matter (an idealized nuclear system) in order to
+include some kind of nuclear-medium effects. This proposal will be the first to actually include affects from finite nuclei in the effective interaction implemented in the (p,2p)
+reaction.  This perscription can then be used to improve any hadron-induced reaction, since this effective interaction will
+be relevant. Since FRIB is utilizing inverse kinematics, all reactions from FRIB will be hadron-induced, thus an effective iteraction will improve the ability to extract
+information from FRIB. This will then lead to the ability to properly extract nuclear structure information for nuclei reaching the limits of stability (the effect could be as much
+as 20\% as we have already seen in the case of p2p). 
+
+\textcolor{blue}{\textbf{Project Plan}}
+To develop a finite-nucleus-informed effective interaction for nuclear reactions, one needs to consider the many ways in which a nucleon interacts as it propagates through a
+nucleus. A natural language to discuss this is the through Green's functions (or single-particle propagators) and perturbation theory~\cite{Exposed!}. Indeed, knowing the
+single-particle propagator of a nucleus is a powerful lever-arm in perturbation theory. We already have an accurate single-particle propagator from the DOM that I developed in my
+PhD. With this, we have the basic building-block to construct the effective interaction. By combining a bare nucleon-nucleon interaction [probably need to say more about this???]
+and the DOM single-particle propagator, the effective interaction can be calculated using already-derived many-body formalism.   
+   The approximation that we can implement will be valid at energies approximately greater than 70 MeV/u, which also corresponds to the region of validity for the DWIA reaction
+   description of (p,2p).  
+
 \begin{figure}[h]
    \begin{tikzpicture}[node distance = 0.5cm]
       \node[fill=green,dashed,rectangle,thick,draw,opacity=0.2,text opacity = 1] (a) at (0.2,0) 
@@ -144,59 +166,14 @@ with $^{40}$Ca - see Fig.
    \node[rectangle] (b2) at (7,0) {\includegraphics[scale=0.25]{figures/p2p-schematic-alpha_newV.png}};
          %\node[rectangle,right=of b1] (b2) at (1,0) {\includegraphics[scale=0.25]{figures/p2p-schematic-alpha_newV.png}};
 \end{tikzpicture}
-\caption{Schematic of the how the effective interaction is generated and how it is used to improve the proton-induced knockout reaction}
-\label{fig:schematic}
    \end{figure}
-
-Until the DOM was developed, previous calculations of (p,2p) were always scaled to match the experimental data - meaning that there was no way to tell if there were a discrepancy
-in the structure description. Because of this, the proton-proton interaction used in the (p,2p) reaction has not seen development for over two decades. The most recent development
-was in 2000[CITE] where a group from Melbourne used infinite nuclear matter (an idealized nuclear system) in order to include some kind of nuclear-medium effects. Our implementation will
-be the first to actually include effects from finite nuclei in the effective interaction implemented in the proton-induced reaction. It may seem that a simpler solution to the
-difficulties of proton-induced reactions is to focus on electron-induced reactions since they pose less issues. The problem with electron-induced reactions it they require a stable
-target, and we (as a scientific community) are interested in the structure of nuclei near the limits of stability. As we mentioned earlier, unstable nuclei can only be studied with
-rare isotope beams like those generated at FRIB. Thus, we are working toward improving proton-induced (and more generally nucleon-induced) nuclear reactions through the development
-of an effective nucleon-nucleon interaction - an improvement that could account for discrepancies of roughly 20\%. 
-%A specific case of this is an electron-induced reaction on $^{40}$Ca
-%where a high-energy electron beam is shot at a Calcium target resulting in the removal of a proton. The PI developed a dispersive optical model (DOM) during his PhD which provides
-%a consistent description of both structure and scattering states of nuclei. In particular, the PI applied the DOM to 40Ca which allowed a consistent reaction-theory description to
-%the electron-induced knockout $(e,e'p)$. For the first time, all ingredients needed for this DWIA description were provided from the same model resulting in a beautiful description
-%of the experimental data. The interesting quantity coming from this reaction is the so-called spectroscopic factor, which is like a probability for the struck proton to have been
-%found in the particular state it was. Now, electron scattering is a very clean way of probing atomic nuclei since the electron-proton interaction is well understand. However,
-%electron scattering requires a stable target - thus only stable nuclei can be investigated with it. Thus, if one wants to investigate nuclei near the limits of stability, inverse
-%kinematics must be utilized as is the case at FRIB. The reactions are more complicated now since they are hadron-induced, thus the nuclear force is used between the projectile and
-%target system. In order to investigate these hadron-induced reactions, I calculated the same proton removal from 40Ca, expect instead of being electron-induced it is proton induced
-%(note that this experiment could be done in inverse kinematics since a Hydrogen gas is a suitable target for a beam of unstable nuclei to strike). Once again, since the DOM is now
-%developed I have a consistent description of all aspects of this removal reaction.
-%However, comparing the resulting cross section with the experimental data showed a 20\% lack of strength. The only difference between the electron-induced reaction and the
-%proton-induced reactions is the fact that the interaction between the probe and the nucleus is now the nuclear force rather than the electromagnetic force (of course the nuclear
-%structure information of 40Ca is an intrinsic property so this remains unchanged). Since the DOM is uniquely suited for both of these reactions, it is now clear that the
-%discrepancy is coming from the proton-proton interaction between the proton probe and the struck proton in Calcium. Thus, I have an ideal testing stage for developing a better
-%proton-proton interaction to improve the reaction description of hadron-induced knockout. Using the DOM, I can dress the bare proton-proton interaction with the structure of 40Ca
-%leading to a more realistic description of the (p,2p) interaction. \textcolor{blue}{[Here I am trying to indicate what else is out there, and also that the stage is uniquely set for us to calculate
-%this now].} 
-%Until the DOM was developed, previous calculations of (p,2p) were always scaled to match the experimental data -
-%meaning that there was no way to tell if there were a discrepancy in the structure description. Because of this, the proton-proton interaction used in the (p,2p) reaction has not
-%seeen development for over two decades. The most recent development was in 2000 where a group from Melbourne used infinite nuclear matter (an idealized nuclear system) in order to
-%include some kind of nuclear-medium effects. This proposal will be the first to actually include affects from finite nuclei in the effective interaction implemented in the (p,2p)
-%reaction.  This perscription can then be used to improve any hadron-induced reaction, since this effective interaction will
-%be relevant. Since FRIB is utilizing inverse kinematics, all reactions from FRIB will be hadron-induced, thus an effective iteraction will improve the ability to extract
-%information from FRIB. This will then lead to the ability to properly extract nuclear structure information for nuclei reaching the limits of stability (the effect could be as much
-%as 20\% as we have already seen in the case of p2p). 
-\\
-\textcolor{blue}{\textbf{Project Plan}}
- - To develop a finite-nucleus-informed effective interaction for nuclear reactions we consider the many ways in which a nucleon interacts as it propagates through a
-nucleus. A natural language to discuss this is the through Green's functions (or single-particle propagators) and perturbation theory~\cite{Exposed!}. Indeed, knowing the
-single-particle propagator of a nucleus is a powerful lever-arm in perturbation theory. We already have an accurate single-particle propagator from the DOM. With this, we have the
-basic building-block to construct the effective interaction. By combining a bare nucleon-nucleon interaction and the DOM single-particle propagator, the effective interaction can
-be calculated using already-derived many-body formalism.   
-   The approximation that we can implement will be valid at energies approximately greater than 70 MeV/u, which also corresponds to the region of validity for the DWIA reaction
-   description of (p,2p).  
-
    
 While the many-body formalism of this approximation to an effective interaction has been known for some time now, it has only been possible to implement in the fictional system of
 infinite nuclear matter [CITE]. The limitation, until now, has been obtaining an accurate single-particle propagator for finite nuclei. Now that the DOM provides the
-single-particle propagator in finite nuclei, we can apply this formalism in a realistic system. Implementing the many-body formalism in a finite system is still nontrivial
-however, even starting from an already-known propagator. The largest bottle neck in the computation of this interaction will be a large matrix inversion. Not only will the matrix inversion be computationally costly, but the generation of the matrix involves multi-dimensional integrals which
+single-particle propagator in finite nuclei, this formalism can now be applied in a realistic way. Implementing the many-body formalism in a finite system is still nontrivial
+however, even starting from an already-known propagator. On a technical level, the two-particle propagator must be generated from the single-particle propagator which itself
+requires approximation. Once a suitable approximation to the two-particle propagator is determined, the solution to the many-body equation to determine the effective interaction
+will involve a large matrix inversion. Not only will the matrix inversion be computationally costly, but the generation of the matrix involves multi-dimensional integrals which
 will be computationally demanding. The limitation of computational power has also been a contribution to the inability to implement this formalism in the past. While this many-body
 formalism will be implemented in a general way, we will specifically be calculating the effective interaction in $^{40}$Ca as it is a doubly-magic nucleus and the DOM describes it
 well. Generally, our objectives are to generate this effective interaction then demonstrate how it enhances reaction theory through some specific cases:
@@ -204,37 +181,41 @@ well. Generally, our objectives are to generate this effective interaction then 
 \textbf{Objective I: Calculate the effective interaction in $^{40}$Ca}
 I will combine a chiral NN interaction (the ones typically used in \textit{ab initio} calculations [CITE]) with the DOM proton propagator of $^{40}$Ca to generate an effective
 proton-proton interaction in $^{40}$Ca. This objective will involve heavy code development as the many-body formalism has not been implemented for finite nuclei. I plan to utilize
-parallel programming so that the multi-dimensional integrals needed in the many-body calculation will be tractable. The PI will be developing the code for this objective with
-general guidance from Co-Is Sofia Quaglioni and Gregory Potel. The expertise of Wim Dickhoff will be invaluable when implementing this many-body formalism. I can test my code by
-using it to calculate free NN scattering, since the formalism will exactly correspond to free-nucleon scattering if I use free propagators in the calculation rather than the DOM
-$^{40}$Ca propagators.
+parallel programming so that the multi-dimensional integrals needed in the many-body calculation will be tractable. I expect this objective to be the bulk of the work. The PI will
+be developing the code for this objective with general guidance from Co-Is Sofia Quaglioni and Gregory Potel. The expertise of Wim Dickhoff will be invaluable when implementing
+this many-body formalism. I can test my code by using it to calculate free NN scattering, since the formalism will exactly correspond to free-nucleon scattering if I use free
+propagators in the calculation rather than the DOM $^{40}$Ca propagators.
 \\
 \textbf{Objective II: Calculate $^{40}$Ca$(p,2p)^{39}$K using the $^{40}$Ca effective interaction}
-Once the effective proton-proton interaction is generated in $^{40}$Ca, it will be straightforward to calculate the $^{40}$Ca$(p,2p)^{39}$K cross section in the same way that
-Fig.~\ref{fig:eep_p2p} was generated. The pipeline with outside collaborator Yoshida is already in place to use the DOM ingredients in the reaction calculation.
+Once the effective proton-proton interaction is generated in $^{40}$Ca, it will be straightforward to calculate the $^{40}$Ca$(p,2p)^{39}$K cross section in the same was that
+Fig.~\ref{fig:eep_p2p} was generated. The pipeline with outside collaborator K. Yoshida from the JAEA is already in place to use the DOM ingredients in the reaction calculation.
 The only difference in the calculation will be that now I can also provide the proton-proton interaction that will be used in the calculation. We don't foresee any complications
 arising in linking our new effective interaction with the existing $(p,2p)$ reaction code. This will result in an improved calculation which will ideally address the discrepancy
-see in Fig.~\ref{fig:eep_p2p}, confirming that the effective interaction is indeed incorporating in-medium effects in a realistic way. 
+see in Fig.~\ref{fig:eep_p2p}. This will confirm that the effective interaction is indeed incorporating in-medium effects in a realistic way. At this point, the machinery to
+generate the effective interaction is in place and has been demonstrated to be working. While the improvement of $(p,2p)$ is itself and accomplishment, there are many more
+applications of this effective interaction, as was indicated in the Introduction.
 \\
 \textbf{Objective III: From the effective interaction, calculate deuteron scattering in $^{40}$Ca}
-After demonstrating the usefulness of the effective interaction in proton-induced knockout, we can also use it to improve deutron-based reactions. The deuteron is a nucleus
+After demonstrating the usefulness of the effective interaction in proton-induced knockout, we can also use it to improve deutron-based reactions. The deuteron is is a nucleus
 consisting of one proton and one neutron bound together. Thus, the relevant interaction involving deuterons is a proton-neutron interaction. Instead of calculating the
 proton-proton effective interaction, it is no extra work to calculate the proton-neutron effective interaction. Using this proton-neutron effective interaction, we can calculate
 the proton-neutron propagation through a nucleus (in this specific case it will be $^{40}$Ca). Using this proton-neutron propagator, we can describe deuteron elastic scattering
 with $^{40}$Ca. Once this is established and verified by comparing with elastic scattering data, the deuteron propagator can then be used to improve more complicated reactions such
 as $(d,p)$ and $(p,d)$. These reactions can act as surrogates to neutron-induced reactions (neutron capture, for example). This objective will demonstrate another class of
-reactions that will benefit from the calculation of this effective interaction. The PI will work closely with co-I Potel when implementing the deuteron propagator.
+reactions that will benefit from the calculation of this effective interaction. The PI will work closely with co-PI Gregory Potel, and expert in deuteron scattering, when
+implementing the deuteron propagator.
 \\
 \textbf{Objective IV: From the effective interaction, calculate an optical potential in $^{40}$Ca}
 Another immediate application our effective interaction is the ability to generate an proton (or neutron) optical potential. An optical potential describes the scattering of
 protons (or neutrons) with nuclei (in this case it will be $^{40}$Ca). Almost any theoretical description of a reaction involving medium-to-heavy mass nuclei requires an optical
-potential. Building an optical potential from our effective interaction is a way of explicitly including the $NN$ interaction into the DOM which is purely phenomenological. We see two motivations for generating
+potential. The DOM is a purely phenomenological potential. Building an optical potential from our effective interaction is a way of explicitly including the $NN$ interaction. Of
+course, we are using DOM propagators to generate the effective interaction so the resulting optical potential will still be phenomenological by construction, however it will now be
+an optical potential that has microscopic features. This provides a handle on how the $NN$ interaction affects elastic-scattering observables. We see two motivations for generating
 this optical potential. The first is that it provides an improvement (in the form of microscopic elements) to the DOM, marking  the advent of a new class of hybrid optical
-potentials which could lead to better extrapolations of nuclei off stabilty. The second is that it paves the way toward a truly \textit{ab initio} optical potential. 
-%We will have a method that generates an optical potential from the NN
-%interaction if the propagator is known. Thus, if one were to use a propagator generated from a simpler approximation, say at the Hartree-Fock level, then our machinery provides a
-%systematic way of improving this optical potential. The ability to construct an optical potential microscopically is highly attractive since it provides a controlled way of
-%predicting the scattering of exotic nuclei that cannot possibly be extrapolated from phenomenological optical potentials. 
+potentials. The PI will work closely with co-PI C. Pruitt, who is also an expert on the DOM, to incorporate these microscopic elements to enhance the DOM. The second is that it paves the way toward a truly \textit{ab initio} optical potential. We will have a method that generates an optical potential from the NN
+interaction if the propagator is known. Thus, if one were to use a propagator generated from a simpler approximation, say at the Hartree-Fock level, then our machinery provides a
+systematic way of improving this optical potential. The ability to construct an optical potential microscopically is highly attractive since it provides a controlled way of
+predicting the scattering of exotic nuclei that cannot possibly be extrapolated from phenomenological optical potentials. 
 \\
 \textbf{Deliverables and Milestones}
 The timeline of the project is outlined in the Gantt chart below. Deliverables consist of publishing three papers in high-profiles papers, one for each implementation of the
@@ -296,52 +277,56 @@ Mile1/.style={milestone/.append style={fill=red}},
 \end{figure}
 \\
 \textbf{Project Impact}
- - This project builds a pathway toward better reaction predictions which will help to launch LLNL further into the forefront of probing new physics in exotic nuclei. In addition
- to providing a deeper understanding nuclear structure, this project also supports LLNL's Stockpile Stewardship mission through better reaction calculations. Improved
- reaction descriptions will greatly enhance the scientific community's ability to extract structure information from the wealth of reaction data coming from FRIB. This will help to
- strengthen the already-healthy relationship between LLNL and FRIB. Additionally, cultivating new collaborations with Washington Univeristy in St. Louis and the Japanese Atomic
- Energy Agency will expand LLNL's scientific network.   
+This project builds a pathway toward better reaction predictions. This work will enhance the lab's capability to contribute to the understanding of the data soon to come from FRIB.
+This project will boost LLNL's capability to calculate complex nuclear reactions. The improved reaction descriptions from this program  will allow LLNL to stay at the forefront for
+probing new physics in exotic nuclei. Furthermore, it will enhance the lab's Stockpile Stewardship mission by providing better calculations of relevant reactions such as neutron
+capture. It will also helpt to cultivate a good relationship with FRIB since it will lead to better calculations of FRIB-relevant reactions. It will help strengthen connections to
+institutions involved in the project, Washington University in St. Louis as well as the Japan Atomic Energy Agency. 
 \\
 \textbf{Risks and Mitigations}
- - Even with the reaction description improved dramatically (and made more consistent), it is possible that implementing the effective interaction won't
+Even with the reaction description improved dramatically (and made more consistent), it is possible that implementing the effective interaction won't
 fully account for the discrepancy in the (p,2p) results in Fig.~\ref{fig:eep_p2p}. If this turns out to be the case, the work is still important because it will inform us that
 something in the reaction description itself is now the problem. With a full treatment of the boundstates, scattering states, and effective proton-proton interaction consistently
-derived from the same DOM potential, this calculation would show without ambiguity that the reaction description needs more development.
+derived from the same DOM potential, this calculation would show without ambiguity that the reaction description needs more development. So, even if the effective interaction does
+not fully solve the discrepancy, this project will still lead to improved reaction descriptions. Furthermore, the improvement of the particular (p,2p) reaction is only one
+objective in this proposal. The effective interaction opens doors to improvements of any hadron-induced reactions, so we will also explore the effect it has on deuteron scattering
+and phenomenological optical potentials.
 \\
-\textbf{Project Team}  - The team consists of postdoctoral researcher Mack Atkinson (PI), staff scientist Gregory Potel (co-I), staff scientist Cole Pruitt (co-I), and NACS group
+\textbf{Project Team} The team consists of postdoctoarl researcher Mack Atkinson (PI), staff scientist Gregory Potel (co-I), staff scientist Cole Pruitt (co-I), and NACS group
 leader Sofia Quaglioni (co-I), outside collaborator Willem Dickhoff (full professor at Washington University in St. Louis), and outside collaborator Yoshida Kazuki (staff
 scientist at the Japan Atomic Energy Agency (JAEA)). Atkinson is an expert in many-body theory and reaction theory. He will be developing the code to calculate the effective interaction. Potel is an
-expert in reaction theory, particularly those involving deuterons. He will be involved with Objective III when implementing the effective interaction to calculate deuteron
-scattering. Pruitt is an expert in optical potentials and the DOM. He will assist in integrating the effective-interaction-derived optical potential (Objective IV) into the DOM.
-Quaglioni is a world-recognized expert in \textit{ab initio} reaction theory who will provide guidance throughout the life of the project. Dickhoff is an expert in many-body
-theory; he will lend support for Objective I when calculating the effective interaction in 40Ca. Yoshida is an expert in (p,2p) reactions and will be heavily involved in objective
-II when the effective interaction is applied in the $^{40}$Ca$(p,2p)^{39}$K reaction.
+expert in reaction theory, and particularly on deuteron-based reactions. He will be involved with Objective III when implementing the effective interaction to calculate deuteron
+scattering. Pruitt is an expert in optical potentials and the DOM. He will assist in integrating of the effective-interaction-derived optical potential into the DOM to go towards
+hybrid optical potentials. Quaglioni is a world-recognized expert in \textit{ab initio} reaction theory who will provide guidance throughout the life of the project. Dickhoff is an
+expert in many-body theory, he will lend support for objective I when calculating the effective interaction in 40Ca. Yoshida is an expert in (p,2p) reactions and will be heavily
+involved in objective II when the effective interaction is applied in the $^{40}$Ca$(p,2p)^{39}$K reaction.
 \\
 \textbf{Budget}
  - We request funding in the amount of \$221k for Year 1 and \$230k for Year 2 to support: the PI at 50\%, Potel at 10\%, Pruitt at 10\%, and Quaglioni at 5\%. The funding will
  also include travel for the PI to disseminate the results of the project at conferences/workshops.
 \\
 \textbf{Exit Plan}
- - This project will enhance LLNL's capability to predict a variety of high-energy nuclear reactions important for nuclear astrophysics and National Security applications which will
-help to grow LLNL's DOE Office of Science (DOE/SC) base funding for nuclear physics. This project will boost the visibility of the PI and set the stage for pursuing a DOE Early
+This project will enhance LLNL's capability to predict a variety of high-energy nuclear reactions important for nuclear astrophysics and National Security applications which will
+help to grow the LLNL's DOE Office of Science (DOE/SC) base funding for nuclear physics. This project will boost the visibility of the PI and set the stage for pursuing a DOE Early
 Career Award. Upon completion of the effective interaction, the applications to other nuclear reactions are many. While this project focuses on $^{40}$Ca the code to generate the
 effective interaction will be agnostic to the particular nucleus, so this method can then be applied to any nucleus. Thus, we can continue to utilize the machinery for generating
 the effective interactions relevant to many other reactions. Furthermore, the particular reactions that we choose to demonstrate during the project are just a subset of what is
-possible with this formalism. The consistent description of the (p,2p) reaction can lead to an analysis of many other (p,2p) data and could even help to address the polarization
-puzzle to which there is no current solution.  With the endorsement of FRIB400 (a higher energy beam at FRIB) in the Nuclear Structure and Reactions Town Hall Meeting in 2022,
-there will certainly be many new (p,2p) experiments being performed at the limits of stability whose analysis will benefit from this effective interaction machinery. The deuteron
-studies will be highly relevant for many deuteron-based experiments at FRIB. Finally, the beginnings of a hybrid optical potential that is both phenomenological while also
-containing microscopic elements could help to control the extrapolation of these potentials away from stability. 
+possible with this formalism. Transfer reactions, stripping reactions, (p,pn) are some examples of interesting reactions to study with this effective interaction. The consistent
+description of the (p,2p) reaction can lead to an analysis of many other (p,2p) data and could even help to address the polarization puzzle to which there is no current solution.
+With the endorsement of FRIB400 (a higher energy beam at FRIB) in the Nuclear Structure and Reactions Town Hall Meeting in 2022, there will certainly be many new (p,2p) experiments
+being performed at the limits of stability whose analysis will benefit from this effective interaction machinery. The deuteron studies will be highly relevant for many
+deuteron-based experiments at FRIB. Finally, the beginnings of a hybrid optical potential that is both phenomenological but contains microscopic elements can be explored further
+and could help to control the extrapolation of these potentials away from stability. 
 \\
 \textbf{Summary}
- - We will develop a method to generate an effective nucleon-nucleon interaction in nuclei improve nuclear-reaction calculations. The need for this effective interaction is most
- clearly demonstrated in the knockout reactions presented in Fig.~\ref{fig:eep_p2p}, revealing a 20\% discrepancy in what boundstate information can be extracted from this
- reaction. Employing our proposed effective interaction in this calculation will remedy this situation, thus enabling the community to reliably extract nuclear structure properties
- from these complex nuclear reactions. This will be the first time a nucleon-nucleon interaction is dressed specifically with finite-nucleus information. The effective interaction
- can improve many other reaction calculations beyond just $(p,2p)$, two of which we will explicity demonstrate during our project (deuteron scattering and optical potentials).
- Without accurate nuclear-reaction predictions, very little could be learned from nuclear scattering experiments. Thus, our improvements to nuclear-reaction descriptions help to
- harness the wealth of experimental data coming from the DOE-funded facility FRIB to investigate nuclei approaching the limits of stablity.  Our improvements to nuclear-reaction
- predictions are vital to further unravelling the mystery of how protons and neutrons arrange themselves in nuclei.
+ - We will develop a method to generate an effective nucleon-nucleon interaction in nuclei improve hadron-induced reaction calculations. The need for this effective interaction is
+ most clearly demonstrated in the specific reaction description of $^{40}$Ca$(p,2p)^{39}$K (see Fig.~\ref{fig:eep_p2p}) revealing a 20\% discrepancy in what boundstate information
+ can be extracted from this reaction. Employing our proposed effective interaction in this calculation will remedy this situation, thus enabling the community to reliably extract
+ nuclear structure properties from these complex nuclear reactions. This will be the first time a nucleon-nucleon interaction is dressed specifically with finite-nucleus
+ information. The effective interaction can improve many other reaction calculations, two of which we will explicity demonstrate during our project (deuteron scattering and optical
+ potentials). Without accurate nuclear-reaction predictions, very little could be learned from nuclear scattering experiments. Thus, our improvements to nuclear-reaction
+ descriptions help to harness the wealth of experimental data that will come from the DOE-funded facility FRIB.  Thus, our improvements to nuclear-reaction predictions are vital to
+ further unravelling the mystery how protons and neutrons arrange themselves in nuclei.
 
 %\bibliographystyle{apsrev4-1}
    \bibliographystyle{elsarticle-test}
